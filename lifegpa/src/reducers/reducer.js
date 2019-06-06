@@ -1,10 +1,10 @@
 import { UPDATE_TITLE, ADD_FRIEND, TOGGLE_BESTIES } from "../actions";
 
 const initialState = {
-  title: "Title from Redux store",
+  title: "My daily habits",
   friends: [
-    { name: "Clint", besties: true },
-    { name: "Caitlin", besties: false }
+    { name: "Win Hof breathwork", besties: false },
+    { name: "Lion's Mane & AlphaGPC", besties: false }
   ]
 };
 
@@ -30,9 +30,10 @@ function reducer(state = initialState, action) {
       const filteredFriends = state.friends.filter(friend => {
         if (friend.name === action.payload) {
           friend.besties = true;
-        } else {
-          friend.besties = false;
-        }
+        } 
+        // else {
+        //   friend.besties = false;
+        // }
         return friend;
       });
       return {

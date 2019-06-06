@@ -30,7 +30,7 @@ class FriendsList extends React.Component {
               <li
                 key={friend.name}
                 onClick={() => this.onListClick(friend.name)}
-              >{`${friend.name} is bestie?: ${friend.besties}`}</li>
+              >{`${friend.name} completed today?: ${friend.besties}`}</li>
             );
           })}
         </ul>
@@ -40,7 +40,7 @@ class FriendsList extends React.Component {
             onChange={this.onInputChange}
             value={this.state.newFriend}
           />
-          <button onClick={this.onClick}>Add Friend</button>
+          <button onClick={this.onClick}>Add Habit</button>
         </form>
       </>
     );
