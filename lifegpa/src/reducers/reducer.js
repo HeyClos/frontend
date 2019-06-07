@@ -4,7 +4,7 @@ const initialState = {
   title: "My daily habits",
   friends: [
     { name: "Win Hof breathwork", besties: false },
-    { name: "Lion's Mane & AlphaGPC", besties: false }
+    { name: "Drink Lion's Mane", besties: false }
   ]
 };
 
