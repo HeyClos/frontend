@@ -28,6 +28,7 @@ export default class Login extends Component {
         axios
             .post('https://life-gpa-be.herokuapp.com/api/login', this.state )
             .then(response => {
+                console.log(response)
               localStorage.setItem('username', response.data.token)
               })
             .catch(err => {
@@ -38,20 +39,22 @@ export default class Login extends Component {
         render() {
             return (
                 <div>
-                    <form onSubmit={this.loginSubmit} >
+                    <form onSubmit={() => this.loginSubmit} >
                         <input 
                         type='text'
                         onChange={this.changeHandler}
                         name='username'
-                        placeHolder='Enter your username.'
+                        placeholder='Username.'
                         />
                         
                         <input 
                         type='text'
                         onChange={this.changeHandler}
                         name='password'
-                        placeHolder='Enter your password.'
+                        placeholder='Password.'
                         />
+                        <button> Log in
+                        </button>
                     </form>
                     
                 </div>
