@@ -3,15 +3,17 @@ import ToDoForm from './components/TodoForm';
 import ToDoList from './components/TodoList';
 import './components/Todo.css';
 import Score from './components/Score';
+import Login from './components/Login'
+
 
 const todos = [
   {
-    task: "Write 3 scenes",
+    task: "Drink Lions Mane",
     id: 1528817077286,
     completed: false
   },
   {
-    task: "Buy cookie dough",
+    task: "Morning Breathwork",
     id: 1528817084358,
     completed: false
   }
@@ -75,15 +77,17 @@ class App extends React.Component {
   render() {
     return (
       <div className = "cool-style">
-        <h1>To-do List</h1>
+        <Login />
+          <h1>My daily checklist</h1>
+          <h3>(soon-to-be habits)</h3>
 
-        <div className = "list-style">
-          <ToDoList todosOnState={this.state.todo} toggleComplete={this.toggleComplete} />
-        </div>
+          <div className = "list-style">
+            <ToDoList todosOnState={this.state.todo} toggleComplete={this.toggleComplete} />
+          </div>
 
-        <ToDoForm addTodo={this.addTodo} todo={this.state.inputField} handleChanges={this.handleChanges} removeCompleted={this.removeCompleted} handleSubmit={this.handleSubmit} />
+          <ToDoForm addTodo={this.addTodo} todo={this.state.inputField} handleChanges={this.handleChanges} removeCompleted={this.removeCompleted} handleSubmit={this.handleSubmit} />
 
-        <Score />
+          <Score />
 
       </div>
     );
