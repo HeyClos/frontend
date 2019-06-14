@@ -30,13 +30,8 @@ axios
   });
 
 
-{
-  headers: {
-    Authorization: localStorage.token
-  }
-}
-
-<PostMovieQuoteForm
-  postMessage={this.postMessage}
-  postSuccessMessage={this.state.postSuccessMessage}
-/>
+// {
+//   headers: {
+//     Authorization: localStorage.token
+//   }
+// }

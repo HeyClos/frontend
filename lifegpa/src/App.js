@@ -77,7 +77,7 @@ class App extends React.Component {
   render() {
     return (
       <div className = "cool-style">
-        <Login />
+          <Login />
           <h1>My daily checklist</h1>
           <h3>(soon-to-be habits)</h3>
 
